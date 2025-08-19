@@ -2,11 +2,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { site } from "../lib/site";
-import { Inter } from "next/font/google";
+import { satoshi } from "./fonts";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://scalable-longevity.de"),
@@ -32,7 +30,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={satoshi.className}>
         {/* gradient begins AFTER the hero height */}
         <div className="min-h-screen sunrise-bg flex flex-col">
           <Nav />

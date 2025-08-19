@@ -8,7 +8,7 @@ export default function Hero() {
       <div className="relative overflow-hidden shadow-soft">
         <video
           className="h-[95vh] w-full object-cover"
-          src="/bg-video.mp4"
+          src="/videos/bg-video.mp4"
           autoPlay
           muted
           loop
