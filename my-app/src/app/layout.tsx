@@ -22,7 +22,6 @@ export const metadata: Metadata = {
   },
 };
 
-// app/layout.tsx
 export default function RootLayout({
   children,
 }: {
@@ -32,7 +31,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={satoshi.className}>
         {/* gradient begins AFTER the hero height */}
-        <div className="min-h-screen sunrise-bg flex flex-col">
+        <div className="min-h-screen sunrise-after-hero flex flex-col">
           <Nav />
           <main className="flex-1">{children}</main>
           <Footer />

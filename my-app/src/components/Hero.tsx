@@ -3,8 +3,8 @@ import { Button } from "./UI";
 
 export default function Hero() {
   return (
-    <section className="">
-      {/* Video box with rounded edges & margins */}
+    <section className="relative hero-section">
+      {/* Video box */}
       <div className="relative overflow-hidden shadow-soft">
         <video
           className="h-[95vh] w-full object-cover"
@@ -16,10 +16,12 @@ export default function Hero() {
           poster="/bg-video.jpg"
           aria-hidden
         />
-        {/* overlay for legibility */}
-        <div className="absolute inset-0 bg-black/20" />
+        {/* legibility scrim */}
+        <div className="absolute inset-0 bg-black/40" />
+        {/* fade to hero-bottom color (so it morphs to the page gradient) */}
+        <div className="absolute inset-x-0 bottom-0 h-60 bg-gradient-to-b from-transparent to-[var(--color-hero-bottom)]" />
 
-        {/* Text content overlay: center-left but tucked closer */}
+        {/* Text overlay: center-left */}
         <div className="absolute inset-0 flex items-center">
           <div className="ml-8 md:ml-12 max-w-lg text-white">
             <h1 className="text-4xl md:text-5xl font-semibold leading-tight drop-shadow">

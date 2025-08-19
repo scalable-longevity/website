@@ -37,9 +37,9 @@
     var(--color-brand-500) 0%,
     var(--color-accent-500) 100%
   );
+  --color-hero-bottom: #0B0B0C; /* very dark neutral, tweak to match your video */
   /* font */
   --font-sans: var(--font-satoshi), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-
 }
 
 /* helpers */
@@ -63,22 +63,34 @@ html, body { height: 100%; }
 .rounded-brand { border-radius: var(--radius-3xl); }
 
 /* --- SUNRISE GRADIENT --- */
-.sunrise-bg {
-  background-image: linear-gradient(
-    to bottom,
-    #1D8CA8 0%,
-    #4591AC 10%,
-    #6197AE 20%,
-    #799BAD 30%,
-    #949EAA 40%,
-    #B29FA4 50%,
-    #CBA29C 60%,
-    #E3A28E 70%,
-    #F9A374 80%,
-    #FE9E4B 90%,
-    #FE920E 100%
-  );
+/* Default: no offset (pages without a hero) */
+.sunrise-after-hero {
+  --hero-h: 0vh;
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-size: cover;
+  background-size: 100% calc(100% - var(--hero-h));
+  background-position: 0 var(--hero-h);
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-hero-bottom) 0%,
+    #1D8CA8 5%,
+    #4591AC 15%,
+    #6197AE 25%,
+    #799BAD 35%,
+    #949EAA 45%,
+    #B29FA4 55%,
+    #CBA29C 65%,
+    #E3A28E 75%,
+    #F9A374 85%,
+    #FE9E4B 95%,
+    #FE920E 100%
+  );
 }
+
+/* If the page contains a hero, start the gradient after its height */
+.sunrise-after-hero:has(.hero-section) { --hero-h: 95vh; }            /* match your video height */
+@media (min-width: 768px) {
+  .sunrise-after-hero:has(.hero-section) { --hero-h: 95vh; }         /* adjust if you change the video height */
+}
+
+
