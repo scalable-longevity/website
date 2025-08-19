@@ -13,7 +13,7 @@ export function Card({
     <div
       className={clsx(
         // frosted glass core
-        "rounded-2xl bg-card/40 backdrop-blur-md",
+        "rounded-2xl bg-card/20 backdrop-blur-md",
         // light border + soft shadow
         "border border-white/30 shadow-soft",
         // spacing

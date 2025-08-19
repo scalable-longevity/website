@@ -11,12 +11,13 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 bg-background/40 backdrop-blur border-b border-border/60">
+    <header className="fixed top-0 left-0 right-0 z-40 bg-background/40 backdrop-blur border-b border-border/60">
       <Container className="flex h-16 items-center justify-between">
         <Link href="/" className="shrink-0">
           <Logo />
         </Link>
 
+        {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
           {site.nav.map((n) => (
             <Link
@@ -32,6 +33,7 @@ export default function Nav() {
           </Button>
         </nav>
 
+        {/* Mobile toggle */}
         <button
           className="md:hidden rounded-brand p-2 hover:bg-muted"
           onClick={() => setOpen((v) => !v)}
@@ -43,10 +45,10 @@ export default function Nav() {
         </button>
       </Container>
 
-      {/* Mobile */}
+      {/* Mobile Menu */}
       <div
         className={clsx(
-          "md:hidden border-t border-border/60",
+          "md:hidden border-t border-border/60 bg-background/95 backdrop-blur",
           open ? "block" : "hidden"
         )}
       >

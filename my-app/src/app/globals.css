@@ -1,42 +1,45 @@
 @import "tailwindcss";
 
 @theme {
-  /* Sunrise palette — Daybreak */
-  --color-brand-400: #6BB4F0;
-  --color-brand-500: #4D9DE8;
-  --color-brand-600: #2E74C6; /* Use for CTAs (white text passes contrast) */
+  /* BRAND — sunrise orange */
+  --color-brand-400: #FFB25A;
+  --color-brand-500: #FE920E;
+  --color-brand-600: #D97400;
   --color-brand: var(--color-brand-500);
+  --color-brand-foreground: #FFFFFF;
 
-  --color-accent-400: #FFC58E;
-  --color-accent-500: #FFAE6F;
-  --color-accent-600: #E8893A;
+  /* ACCENT — cool sky/sea blue */
+  --color-accent-400: #8EC6D8;
+  --color-accent-500: #4591AC;
+  --color-accent-600: #2E6F8A;
   --color-accent: var(--color-accent-500);
+  --color-accent-foreground: #0E0E10;
 
-  /* Foregrounds */
-  --color-brand-foreground: #ffffff;  /* for colored buttons */
-  --color-accent-foreground: #0E0E10; /* accent chips on light backgrounds */
-
-  /* Surfaces & neutrals (keep yours if you like) */
-  --color-background: #ffffff;
+  /* SURFACES & NEUTRALS */
+  --color-background: #FFFFFF;
   --color-foreground: #0E0E10;
-  --color-card: #ffffff;
+  --color-card: #FFFFFF;
   --color-muted: #F5F8F8;
   --color-border: #D9E1E1;
 
-  /* Feedback (optional) */
+  /* FEEDBACK */
   --color-positive: #1E9E72;
   --color-caution: #E6A300;
   --color-critical: #D83A3A;
 
-  /* Radius & shadow */
+  /* RADII & SHADOWS */
   --radius-2xl: 1.25rem;
+  --radius-3xl: 1.5rem;
   --shadow-soft: 0 10px 30px rgba(0,0,0,.08);
 
-  /* Sunrise gradient token */
-  --gradient-brand: linear-gradient(135deg, var(--color-brand-500) 0%, var(--color-accent-500) 100%);
+  /* BRAND GRADIENT */
+  --gradient-brand: linear-gradient(135deg,
+    var(--color-brand-500) 0%,
+    var(--color-accent-500) 100%
+  );
 }
 
-/* helper classes */
+/* helpers */
 .bg-brand-gradient { background: var(--gradient-brand); }
 .text-gradient {
   background: var(--gradient-brand);
@@ -44,7 +47,35 @@
   background-clip: text;
   color: transparent;
 }
+
 html, body { height: 100%; }
-.card { border-radius: var(--radius-2xl); background: var(--color-card); 
-        box-shadow: var(--shadow-soft); border: 1px solid var(--color-border); }
+
+.card {
+  border-radius: var(--radius-2xl);
+  background: var(--color-card);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--color-border);
+}
+
 .rounded-brand { border-radius: var(--radius-3xl); }
+
+/* --- SUNRISE GRADIENT --- */
+.sunrise-bg {
+  background-image: linear-gradient(
+    to bottom,
+    #1D8CA8 0%,
+    #4591AC 10%,
+    #6197AE 20%,
+    #799BAD 30%,
+    #949EAA 40%,
+    #B29FA4 50%,
+    #CBA29C 60%,
+    #E3A28E 70%,
+    #F9A374 80%,
+    #FE9E4B 90%,
+    #FE920E 100%
+  );
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}

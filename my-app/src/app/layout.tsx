@@ -1,3 +1,4 @@
+// app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
 import { site } from "../lib/site";
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
   },
 };
 
+// app/layout.tsx
 export default function RootLayout({
   children,
 }: {
@@ -30,16 +32,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={inter.className}
-        style={{
-          backgroundImage: 'url("/background.jpg")',
-          backgroundSize: "fill",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="min-h-screen flex flex-col">
+      <body className={inter.className}>
+        {/* gradient begins AFTER the hero height */}
+        <div className="min-h-screen sunrise-bg flex flex-col">
           <Nav />
           <main className="flex-1">{children}</main>
           <Footer />
