@@ -1,5 +1,5 @@
 export const site = {
-  name: "Morrow",
+  name: "ENDURA",
   tagline: "Small changes. Longer life.",
   description:
     "Evidence-based coaching to lower your biological age and extend your healthy years. Personalized insights, life-path projections, and a habit engine that sticks.",
@@ -10,5 +10,5 @@ export const site = {
     { label: "About", href: "/about" }
   ],
   cta: { label: "Get started", href: "/pricing" },
-  contact: { email: "hello@morrow.health" }
+  contact: { email: "support@endura.health" }
 };

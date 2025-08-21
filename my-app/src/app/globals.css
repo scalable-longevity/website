@@ -43,7 +43,22 @@
 }
 
 /* helpers */
-.bg-brand-gradient { background: var(--gradient-brand); }
+.bg-sunrise-gradient {
+  background: linear-gradient(
+    to bottom,
+    #1D8CA8 5%,
+    #4591AC 15%,
+    #6197AE 25%,
+    #799BAD 35%,
+    #949EAA 45%,
+    #B29FA4 55%,
+    #CBA29C 65%,
+    #E3A28E 75%,
+    #F9A374 85%,
+    #FE9E4B 95%,
+    #FE920E 100%
+  );
+}
 .text-gradient {
   background: var(--gradient-brand);
   -webkit-background-clip: text;
