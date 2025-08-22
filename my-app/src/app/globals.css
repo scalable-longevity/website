@@ -87,17 +87,16 @@ html, body { height: 100%; }
   background-position: 0 var(--hero-h);
   background-image: linear-gradient(
     to bottom,
-    var(--color-hero-bottom) 0%,
-    #1D8CA8 5%,
-    #4591AC 15%,
-    #6197AE 25%,
-    #799BAD 35%,
-    #949EAA 45%,
-    #B29FA4 55%,
-    #CBA29C 65%,
-    #E3A28E 75%,
-    #F9A374 85%,
-    #FE9E4B 95%,
+    #1D8CA8 0%,
+    #4591AC 10%,
+    #6197AE 20%,
+    #799BAD 30%,
+    #949EAA 40%,
+    #B29FA4 50%,
+    #CBA29C 60%,
+    #E3A28E 70%,
+    #F9A374 80%,
+    #FE9E4B 90%,
     #FE920E 100%
   );
 }

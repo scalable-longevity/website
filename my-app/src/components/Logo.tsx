@@ -6,7 +6,7 @@ export default function Logo({ size = 25 }: { size?: number }) {
         aria-hidden
         style={{ width: size, height: size }}
       />
-      <span className="font-semibold text-2xl tracking-tight text-white">
+      <span className="font-semibold text-2xl tracking-tight text-black">
         ENDURA
       </span>
     </div>

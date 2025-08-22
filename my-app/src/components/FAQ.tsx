@@ -20,12 +20,14 @@ export default function FAQ() {
   return (
     <section className="mt-20">
       <Container>
-        <h2 className="text-2xl md:text-3xl font-semibold">Questions</h2>
+        <h2 className="text-2xl md:text-3xl font-semibold text-white">
+          Questions
+        </h2>
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           {faqs.map((f, i) => (
             <Card key={i}>
-              <div className="font-semibold">{f.q}</div>
-              <p className="mt-2 text-sm text-foreground/80">{f.a}</p>
+              <div className="font-semibold text-white">{f.q}</div>
+              <p className="mt-2 text-sm text-white/60">{f.a}</p>
             </Card>
           ))}
         </div>

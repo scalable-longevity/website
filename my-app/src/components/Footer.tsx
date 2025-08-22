@@ -3,11 +3,11 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="mt-24 border-t border-border/60">
+    <footer className="mt-24 border-t border-border/60 text-white">
       <Container className="py-12 grid gap-8 md:grid-cols-4">
         <div>
           <div className="text-lg font-semibold">Morrow</div>
-          <p className="mt-3 text-sm text-foreground/70">
+          <p className="mt-3 text-sm text-white/70">
             Evidence-based longevity for everyday life.
           </p>
         </div>
@@ -58,7 +58,7 @@ export default function Footer() {
         </div>
       </Container>
       <div className="border-t border-border/60">
-        <Container className="py-6 text-sm text-foreground/70">
+        <Container className="py-6 text-sm text-white/70">
           © {new Date().getFullYear()} Morrow. All rights reserved.
         </Container>
       </div>

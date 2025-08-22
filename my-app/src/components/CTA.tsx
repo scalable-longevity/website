@@ -7,10 +7,10 @@ export default function CTA() {
       <Container>
         <Card className="flex flex-col md:flex-row items-center justify-between gap-6 p-8">
           <div>
-            <div className="text-xl font-semibold">
+            <div className="text-xl font-semibold text-white">
               Ready to add healthy years?
             </div>
-            <p className="text-sm text-foreground/80 mt-1">
+            <p className="text-sm text-white/60 mt-1">
               Start your free trial. Cancel anytime.
             </p>
           </div>

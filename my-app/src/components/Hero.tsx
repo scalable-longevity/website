@@ -17,9 +17,9 @@ export default function Hero() {
           aria-hidden
         />
         {/* legibility scrim */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0" />
         {/* fade to hero-bottom color (so it morphs to the page gradient) */}
-        <div className="absolute inset-x-0 bottom-0 h-60 bg-gradient-to-b from-transparent to-[var(--color-hero-bottom)]" />
+        <div className="absolute inset-x-0 bottom-0 h-60 bg-gradient-to-b from-transparent" />
 
         {/* Text overlay: center-left */}
         <div className="absolute inset-0 flex items-center">
